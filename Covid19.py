@@ -53,8 +53,8 @@ df_merge['deaths_percapita'] = 100*df_merge['deaths']/df_merge['population']
 df_merge['cases_percapita'] = 100*df_merge['cases']/df_merge['population'] 
 df_merge['deaths_percapita'].describe()
 
-hist = df_merge['deaths_percapita'].hist(bins=30)
-np.percentile( df_merge['deaths_percapita'], q = [25, 50, 60, 70, 80, 90])
+#hist = df_merge['deaths_percapita'].hist(bins=30)
+#np.percentile( df_merge['deaths_percapita'], q = [25, 50, 60, 70, 80, 90])
 
 # Convert to discrete values
 def func(x):
@@ -108,7 +108,7 @@ fig.update_layout(#margin={"r":0,"t":0,"l":0,"b":0}, showlegend = True,
             yanchor='bottom',
             y=-0.1,
         )])
-fig.show()
+#fig.show()
 
 fig.write_image("images/fig1.pdf")
 fig.write_image("images/fig1.png")
